@@ -1,0 +1,24 @@
+vehicle:
+  L: 2.5
+  dt: 0.1
+# 假设匀速
+ego_init_state: [0, 0, 1, 0]
+ego_init_u: [0, 0]
+
+waypoints:
+  - [1.0, 2.0]
+  - [2.0, 1.5]
+  - [3.0, 3.0]
+  - [4.0, 2.0]
+  - [5.0, 4.0]
+  
+ilqr:
+  N: 3
+  max_iter: 100
+  tol: 1e-6
+  Q: [1.0, 1.0, 0.1, 0.1]
+  R: [0.01, 0.01]
+  init_lamb: 0
+  max_lamb: 1000
+  eps_cost: 1e-6
+
